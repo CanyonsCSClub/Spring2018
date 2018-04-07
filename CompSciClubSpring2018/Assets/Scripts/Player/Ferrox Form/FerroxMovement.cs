@@ -2,7 +2,7 @@
  * 
  * Authors: Spencer Wilson, Keiran Glynn, Andrew Ramirez
  * Date Created: 3/5/2018 @ 3:15 pm
- * Date Modified: 3/24/2018 @ 9:00 am
+ * Date Modified: 4/7/2018 @ 10:20am
  * Project: CompSciClubSpring2018
  * File: FerroxMovement.cs
  * Description: This class houses the code for the movement of the ferrox.
@@ -20,6 +20,7 @@ public class FerroxMovement : MonoBehaviour {
     public float speed;
     public float horizontal; // -1 = player facing left, 1 = player facing right
     private Rigidbody2D playerRB;
+    public bool pauseInput;
 
     public GameObject ferroxGameObject;
 
@@ -35,18 +36,34 @@ public class FerroxMovement : MonoBehaviour {
 
         horizontal = Input.GetAxis("Horizontal");
 
-        if (Input.GetKey("d"))
+        if (pauseInput == true)
         {
-            transform.Translate(Vector2.right * Time.deltaTime * speed);
+            StartCoroutine(waiter());
+        }
+        else {
+            if (Input.GetKey("d"))
+            {
+                transform.Translate(Vector2.right * Time.deltaTime * speed);
+            }
+
+            if (Input.GetKey("a"))
+            {
+                transform.Translate(Vector2.left * Time.deltaTime * speed);
+            }
         }
 
-        if (Input.GetKey("a"))
-        {
-            transform.Translate(Vector2.left * Time.deltaTime * speed);
-        }
 
         StartCoroutine("TurnIt");
     }
+
+    IEnumerator waiter()
+    {  
+        //Wait for x seconds
+        yield return new WaitForSecondsRealtime(1);
+
+        pauseInput = false;
+    }
+
 
     // Coroutine that flips the character
     public IEnumerator TurnIt()
