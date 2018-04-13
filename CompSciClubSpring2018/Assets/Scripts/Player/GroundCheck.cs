@@ -28,11 +28,13 @@ public class GroundCheck : MonoBehaviour
             if (character.gameObject.name == "Human")
             {
                 character.GetComponent<HumanJump>().SetIsGrounded(false);
-            }
+                character.GetComponent<HumanMovement>().SetIsGrounded(false);
+        }
             else if (character.gameObject.name == "Ferrox")
             {
                 character.GetComponent<FerroxJump>().SetIsGrounded(false);
-            }
+                //character.GetComponent<FerroxMovement>().SetIsGrounded(false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -42,10 +44,12 @@ public class GroundCheck : MonoBehaviour
             if (character.gameObject.name == "Human")
             {
                 character.GetComponent<HumanJump>().SetIsGrounded(true);
+                character.GetComponent<HumanMovement>().SetIsGrounded(true);
             }
             else if (character.gameObject.name == "Ferrox")
             {
                 character.GetComponent<FerroxJump>().SetIsGrounded(true);
+                //character.GetComponent<FerroxMovement>().SetIsGrounded(true);
             }
         }
     }
