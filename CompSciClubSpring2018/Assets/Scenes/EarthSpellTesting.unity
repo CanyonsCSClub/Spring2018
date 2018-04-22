@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 184776122}
   - component: {fileID: 184776121}
   - component: {fileID: 184776125}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,8 +225,7 @@ GameObject:
   - component: {fileID: 971447781}
   - component: {fileID: 971447780}
   - component: {fileID: 971447784}
-  - component: {fileID: 971447785}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Earth Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,17 +313,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &971447785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 971447779}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7defd28b819a52642802eae94e85e662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1040517326
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,8 +526,7 @@ GameObject:
   - component: {fileID: 1746124138}
   - component: {fileID: 1746124137}
   - component: {fileID: 1746124136}
-  - component: {fileID: 1746124141}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Earth Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,17 +614,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1746124141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1746124135}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7defd28b819a52642802eae94e85e662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1913820460
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,8 +626,7 @@ GameObject:
   - component: {fileID: 1913820463}
   - component: {fileID: 1913820462}
   - component: {fileID: 1913820461}
-  - component: {fileID: 1913820466}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Earth Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,14 +714,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1913820466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1913820460}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7defd28b819a52642802eae94e85e662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

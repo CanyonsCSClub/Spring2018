@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23427536694316588}
   - component: {fileID: 54740048523731614}
   - component: {fileID: 114862322374708378}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: earthSpell
   m_TagString: Earth Spell Object
   m_Icon: {fileID: 0}
@@ -128,3 +128,4 @@ MonoBehaviour:
   extendSpeed: 0.1
   maxGrow: 3
   destroyTime: 5
+  stopOnHitEarth: 1
