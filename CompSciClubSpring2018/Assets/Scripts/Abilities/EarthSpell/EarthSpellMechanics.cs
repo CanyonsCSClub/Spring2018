@@ -3,7 +3,7 @@
  * Last Edited: 4/20/18
  * Programmer: Daniel Jaffe & Darrell Wong
  * Description: Functionality of Earth Spell - Attach to the earthSpell object (cube):
- *      1. When an earth spell is created from EarthSpellUse.cs, the properties of the earth spell are defined here
+ *      1. When an earth spell is created from EarthSpellUse.cs, the properties of the earth spell are defined
  *      2. Click and drag functionality decides growth direction
  *      3. Properties of growth speed/distance, maxSpells, and decay time are public variables
  *      4. Earth spell growth will stop on collision with specified objects with:
@@ -140,13 +140,23 @@ public class EarthSpellMechanics : MonoBehaviour {
         //The earth spell growth can be stopped by adding more tags to this if statement
         if (col.collider.gameObject.layer == LayerMask.NameToLayer("Floor")     
             || col.collider.gameObject.layer == LayerMask.NameToLayer("Earth")  
-            || col.collider.gameObject.CompareTag("Earth Spell Object"))    
+            || col.collider.gameObject.CompareTag("Earth Spell Object"))
         {
-            
-            if (!firstCollision)    //This is used to negate the initial collision of instantiating the earth spell inside of an earth block
-                                    //bool firstCollision is instantiated in the Start() function
+
+            // bool firstCollision is instantiated in the Start() function
+            //This is used to negate the initial collision of instantiating the earth spell inside of an earth block
+            if (!firstCollision)            
             {
-                firstCollision = true;
+                //prevents stacking of earth spells
+                if (col.collider.gameObject.CompareTag("Earth Spell Object"))
+                {
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    firstCollision = true;
+                }
+                
             }
             else
             { 
