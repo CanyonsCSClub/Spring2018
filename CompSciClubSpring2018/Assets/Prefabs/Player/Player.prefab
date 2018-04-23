@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114132057661514978}
   - component: {fileID: 114735917215788982}
   - component: {fileID: 60240740350369350}
+  - component: {fileID: 114764620326550562}
+  - component: {fileID: 114584633934042360}
   m_Layer: 8
   m_Name: Ferrox
   m_TagString: Ferrox
@@ -152,7 +154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1583462892046584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.66, z: 0}
+  m_LocalPosition: {x: -0.05, y: -2.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4838637959332306}
@@ -452,10 +454,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facingRight: 0
-  speed: 20
+  speed: 13
   horizontal: 0
   pauseInput: 0
   ferroxGameObject: {fileID: 0}
+--- !u!114 &114584633934042360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128226839337886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57cdd3e211c538646a013ac230a5e7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ferroxGameObject: {fileID: 1128226839337886}
+  speed: 10
+  distance: 1
+  touchingWall: 0
 --- !u!114 &114722207518286856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -480,8 +497,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ferroxRB: {fileID: 50133733317281100}
-  jumpSpeed: 40000
+  jumpSpeed: 50000
   isGrounded: 0
+--- !u!114 &114764620326550562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128226839337886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e99be1d6bf256d468c0dde9fc84d5f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ferroxHP: 1
+  playerGameObject: {fileID: 1583462892046584}
+  humanGameObject: {fileID: 1285828761395028}
+  ferroxGameObject: {fileID: 1128226839337886}
 --- !u!114 &114777011229513540
 MonoBehaviour:
   m_ObjectHideFlags: 1
