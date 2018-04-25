@@ -9,6 +9,7 @@ TagManager:
   - Ferrox
   - Human
   - Platforms
+  - Walls
   layers:
   - Default
   - TransparentFX

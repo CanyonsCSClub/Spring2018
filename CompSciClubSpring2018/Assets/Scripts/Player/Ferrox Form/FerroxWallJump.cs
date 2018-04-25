@@ -74,7 +74,7 @@ public class FerroxWallJump : MonoBehaviour {
     // checks if the player is touching a wall
     private void OnCollisionEnter2D(Collision2D collision)
     {
-            touchingWall = collision.gameObject.tag == "Platforms";
+            touchingWall = collision.gameObject.tag == "Walls";
     }
 
     // draws hitbox to detect walls; hint turn on gizmos to view
