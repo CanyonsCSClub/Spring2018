@@ -10,6 +10,7 @@ TagManager:
   - Human
   - Platforms
   - Walls
+  - Borders
   layers:
   - Default
   - TransparentFX
