@@ -13,26 +13,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     public GameObject humanGameObject; // Public game object that holds the little girl game object.
     public GameObject ferroxGameObject; // Public game object that holds the ferrox's game object.
     private bool isProjecting = true; // Creating a private boolean variable that represents whether or not the player is projecting.
-	// Use this for initialization
-	public void Start () {
+                                      // Use this for initialization
+    public void Start()
+    {
         SetIsProjecting(); // Initializing isProjecting to be false at the start of the level.
-	}
-	
-	// Update is called once per frame
-	public void Update ()
+    }
+
+    // Update is called once per frame
+    public void Update()
     {
         CheckInput(); // Checks if input has been recieved from device to determine the boolean value of isProjecting.
         CheckIfProjecting(); // Determines what happens between the player's projections and other such things.
-	}
+    }
 
     public void CheckInput() // Check input for whether or not player has seleted to project or not.
     {
-        if(Input.GetKeyUp("g")) // When "g" is pressed, switch the isProjecting value to it's opposite boolean value.
+        if (Input.GetKeyUp("g")) // When "g" is pressed, switch the isProjecting value to it's opposite boolean value.
         {
             SetIsProjecting();
         }
@@ -40,7 +42,7 @@ public class PlayerController : MonoBehaviour {
 
     private void CheckIfProjecting() // Checks whether or not player is projecting and switches the to corresponding form.
     {
-        if(isProjecting) // If the player is projecting, switch to the yokai form.
+        if (isProjecting) // If the player is projecting, switch to the yokai form.
         {
             humanGameObject.GetComponent<HumanMovement>().SetIfActive(false); // Turns off the human's movement.
             ferroxGameObject.SetActive(true); // Sets the ferroxGameObject to be active.
@@ -61,9 +63,8 @@ public class PlayerController : MonoBehaviour {
      * In the future, it may be benneficial to have it accept a true or false paramater so that the value of 'isProjecing can be 
      * explicitly chosen. 
      */
-     public void SetIsProjecting()
+    public void SetIsProjecting()
     {
         isProjecting = !isProjecting;
     }
-
 }
