@@ -193,7 +193,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 14481778}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.5, y: 13.5, z: 0}
+  m_LocalPosition: {x: 7.5, y: 13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 863585708}
@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 61999742}
   - component: {fileID: 61999741}
   - component: {fileID: 61999740}
+  - component: {fileID: 61999743}
   m_Layer: 0
   m_Name: Platform-Middle
   m_TagString: Untagged
@@ -446,6 +447,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &61999743
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61999738}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &65780347
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +494,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 65780347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.5, y: 13.5, z: 0}
+  m_LocalPosition: {x: 9.5, y: 13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 679818168}
@@ -1179,7 +1205,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 382811163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.5, y: 13.5, z: 0}
+  m_LocalPosition: {x: 8.5, y: 13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1428073199}
@@ -13208,6 +13234,7 @@ GameObject:
   - component: {fileID: 1142669719}
   - component: {fileID: 1142669721}
   - component: {fileID: 1142669720}
+  - component: {fileID: 1142669722}
   m_Layer: 0
   m_Name: Platform-Middle
   m_TagString: Untagged
@@ -13324,6 +13351,31 @@ Tilemap:
     e32: 0
     e33: 1
   m_TileRefreshArray: []
+--- !u!61 &1142669722
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142669717}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1165659745
 GameObject:
   m_ObjectHideFlags: 0
@@ -13602,6 +13654,7 @@ GameObject:
   - component: {fileID: 1291605875}
   - component: {fileID: 1291605874}
   - component: {fileID: 1291605873}
+  - component: {fileID: 1291605876}
   m_Layer: 0
   m_Name: Platform-Middle
   m_TagString: Untagged
@@ -13718,6 +13771,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1291605876
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291605871}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1303588113 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1285912486631336, guid: 640ca10c21ccf55469400ab5111df0a2,
@@ -13796,6 +13874,7 @@ GameObject:
   - component: {fileID: 1338685381}
   - component: {fileID: 1338685380}
   - component: {fileID: 1338685379}
+  - component: {fileID: 1338685382}
   m_Layer: 0
   m_Name: Platform-Middle
   m_TagString: Untagged
@@ -13912,6 +13991,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1338685382
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1338685377}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1345159481
 GameObject:
   m_ObjectHideFlags: 0
@@ -13924,6 +14028,7 @@ GameObject:
   - component: {fileID: 1345159485}
   - component: {fileID: 1345159484}
   - component: {fileID: 1345159483}
+  - component: {fileID: 1345159486}
   m_Layer: 0
   m_Name: Platform-Middle
   m_TagString: Untagged
@@ -14040,6 +14145,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1345159486
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1345159481}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1357635666
 GameObject:
   m_ObjectHideFlags: 0
@@ -18707,7 +18837,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1970291957}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.5, y: 13.5, z: 0}
+  m_LocalPosition: {x: 10.5, y: 13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2024907455}
@@ -38054,15 +38184,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 11, y: 13, z: 0}
-    second:
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 37, y: 13, z: 0}
     second:
       m_TileIndex: 8
@@ -39710,7 +39831,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 809c3cc1c0717c047bbeca5d48101f80, type: 2}
   - m_RefCount: 82
     m_Data: {fileID: 11400000, guid: ae1eeca10e6d0e64cb34153062c62dbc, type: 2}
-  - m_RefCount: 2027
+  - m_RefCount: 2026
     m_Data: {fileID: 11400000, guid: 20fd599cb29dd4b41801daaea663cb0a, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 5f7977a2b39663547bfcc4c0ed502f39, type: 2}
@@ -39741,7 +39862,7 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 40afa90e288017d489411ab284a0ecd3, type: 3}
   - m_RefCount: 82
     m_Data: {fileID: 21300000, guid: 5bdb806d14c576842b87bdd01740011b, type: 3}
-  - m_RefCount: 2027
+  - m_RefCount: 2026
     m_Data: {fileID: 21300000, guid: 881422868c844c54594a44816c9d9948, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: f6b68b9d6af845e45bb75f1b7f732ba4, type: 3}
@@ -39754,7 +39875,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 78f6cce8439a94144a162945027938b1, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 2178
+  - m_RefCount: 2177
     m_Data:
       e00: 1
       e01: 0
@@ -39847,7 +39968,7 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 271
     m_Data: {r: 1, g: 1, b: 1, a: 1}
-  - m_RefCount: 2027
+  - m_RefCount: 2026
     m_Data: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
