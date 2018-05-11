@@ -147,16 +147,7 @@ public class EarthSpellMechanics : MonoBehaviour {
             //This is used to negate the initial collision of instantiating the earth spell inside of an earth block
             if (!firstCollision)            
             {
-                //prevents stacking of earth spells
-                if (col.collider.gameObject.CompareTag("Earth Spell Object"))
-                {
-                    Destroy(gameObject);
-                }
-                else
-                {
-                    firstCollision = true;
-                }
-                
+                firstCollision = true;
             }
             else
             { 

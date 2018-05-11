@@ -4,6 +4,7 @@
  * Programmer: Daniel Jaffe
  * Description: Spawn in the earthSpell object (cube) - Attach to the Earth Spell Spawner object:
  *      1. Spawns a eSpell object at the point of click
+ *      2. Uses a OverlapSphere to check eSpell overlap
  */
 
 using System.Collections;
@@ -13,7 +14,8 @@ using UnityEngine;
 
 public class EarthSpellUse : MonoBehaviour
 {
-
+    public float overlapRadius = .59F;
+    public bool spellOverlap = false;
     public GameObject eSpell;
     public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
 
@@ -36,8 +38,25 @@ public class EarthSpellUse : MonoBehaviour
                 //get the location of the player click
                 Vector3 playerinput = Camera.main.ScreenToWorldPoint(new
                             Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
-                //spawns the eSpell object into play
-                Instantiate(eSpell, new Vector3(playerinput.x, playerinput.y, 0), Quaternion.identity);
+
+                //Checking for overlapping eSpell spawns
+                Collider[] hitColliders = Physics.OverlapSphere(playerinput, overlapRadius);
+                spellOverlap = false;
+                for (int i = 0; i < hitColliders.Length; i++)
+                {
+                    if (hitColliders[i].tag == "Earth Spell Object")
+                    {
+                        print("Overlap");
+                        spellOverlap = true;
+                        break;
+                    }
+                }
+                if (!spellOverlap)
+                {
+                    //spawns the eSpell object into play
+                    Instantiate(eSpell, new Vector3(playerinput.x, playerinput.y, 0), Quaternion.identity);
+                }
+
                 //Swiper(); Swiper is now used in EarthSpellMechanics
             }
         }

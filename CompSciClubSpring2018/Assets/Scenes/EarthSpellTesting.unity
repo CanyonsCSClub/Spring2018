@@ -512,6 +512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0df83f5937cefc54dadb3d64cdd41a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overlapRadius: 0.59
+  spellOverlap: 0
   eSpell: {fileID: 1907276841444114, guid: 4753e1a5cf66be34186583ddc65045ba, type: 2}
   playerinput: {x: 1, y: 1, z: 0}
 --- !u!1 &1746124135
