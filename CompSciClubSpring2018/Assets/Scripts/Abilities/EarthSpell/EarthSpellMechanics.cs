@@ -1,6 +1,6 @@
 ﻿/* EarthSpellMechanics.cs
  * Date Created: 3/15/18
- * Last Edited: 4/20/18
+ * Last Edited: 5/18/18
  * Programmer: Daniel Jaffe & Darrell Wong
  * Description: Functionality of Earth Spell - Attach to the earthSpell object (cube):
  *      1. When an earth spell is created from EarthSpellUse.cs, the properties of the earth spell are defined
@@ -10,7 +10,7 @@
  *          a)"Floor" layer
  *          b)"Earth" layer
  *          c)"Earth Spell Object" tag
- *          
+ *      5. EarthSpell starts with size 0,0,0. Grows to 1,1,1 once grow direction is specified.
  */
 
 using System.Collections;
@@ -30,10 +30,10 @@ public class EarthSpellMechanics : MonoBehaviour {
     public int maxSpells = 3;
     public float extendFactor = 25f;
     public float extendSpeed = .1f;
-    public float maxGrow = 3.0f;
     public int destroyTime = 5;
-    public bool stopOnHitEarth = true;
+    private bool stopOnHitEarth = true;
     bool firstCollision;
+    bool sizeNotSet = true;
 
 
     //Start
@@ -76,6 +76,12 @@ public class EarthSpellMechanics : MonoBehaviour {
 
         if (Mathf.Abs(deltaX) > Mathf.Abs(deltaY))
         {
+            if (sizeNotSet)
+            {
+                gameObject.transform.localScale = new Vector3(0, 1, 1);
+                sizeNotSet = false;
+            }
+
             if (deltaX > 0) {
                 for (int i = 0; i < extendFactor; i++)
                 {
@@ -100,11 +106,19 @@ public class EarthSpellMechanics : MonoBehaviour {
         }
         else if (Mathf.Abs(deltaX) < Mathf.Abs(deltaY))
         {
+            if (sizeNotSet)
+            {
+                gameObject.transform.localScale = new Vector3(1, 0F, 1);
+                sizeNotSet = false;
+            }
+
+
             if (deltaY > 0)
             {
                 for (int i = 0; i < extendFactor; i++)
                 {
                     //stretches object in the Y direction
+
                     gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
                     //moves the object along to accomidate for equal stretching on both sides
                     gameObject.transform.Translate(0, (extendSpeed / 2), 0);

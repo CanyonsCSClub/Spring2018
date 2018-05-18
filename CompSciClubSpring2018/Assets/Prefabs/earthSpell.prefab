@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1907276841444114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -106,7 +106,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907276841444114}
-  m_Material: {fileID: 13400000, guid: c4f5ff3889140054d8ab73d9435061f1, type: 2}
+  m_Material: {fileID: 13400000, guid: c6feb147b2c8e634fbfb5b8ec83da4e5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -124,8 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpells: 3
-  extendFactor: 25
+  extendFactor: 30
   extendSpeed: 0.1
-  maxGrow: 3
   destroyTime: 5
-  stopOnHitEarth: 1

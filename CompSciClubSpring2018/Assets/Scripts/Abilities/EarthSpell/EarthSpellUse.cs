@@ -1,6 +1,6 @@
 ﻿/* EarthSpellUse.cs
  * Date Created: 3/15/18
- * Last Edited: 3/29/18
+ * Last Edited: 5/18/18
  * Programmer: Daniel Jaffe & Darrell Wong
  * Description: Spawn in the earthSpell object (cube) - Attach to the Earth Spell Spawner object:
  *      1. Uses a OverlapSphere to check eSpell overlap
@@ -15,7 +15,7 @@ using UnityEngine;
 
 public class EarthSpellUse : MonoBehaviour
 {
-    public float overlapRadius = .59F;
+    public float overlapRadius = .59F; // shpere to cover 1,1,1, cube
     public bool spellOverlap = false;
     public GameObject eSpell;
     public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
